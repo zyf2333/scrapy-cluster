@@ -20,7 +20,7 @@ class LinkSpider(RedisSpider):
         super(LinkSpider, self).__init__(*args, **kwargs)
 
     def parse(self, response):
-        self._logger.debug("crawled url {}".format(response.request.url))
+        self._logger.debug("crawled url ttt:{}".format(response.request.url))
         cur_depth = 0
         if 'curdepth' in response.meta:
             cur_depth = response.meta['curdepth']
