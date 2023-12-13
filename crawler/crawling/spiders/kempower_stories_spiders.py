@@ -5,7 +5,7 @@ import scrapy
 import json
 import re
 
-from MyScrapy.items import ArticleItem
+from items import ArticleItem
 
 
 class KempowerStoriesSpidersSpider(scrapy.Spider):

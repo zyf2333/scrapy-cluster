@@ -20,3 +20,19 @@ class RawResponseItem(Item):
     success = Field()
     exception = Field()
     encoding = Field()
+
+
+class ArticleItem(Item):
+    id = Field()
+    type = Field()
+    # 渠道
+    channel = Field()
+    title = Field()
+    # 发帖日期
+    event_date = Field()
+    content = Field()
+    link = Field()
+    # 时区
+    timezone = Field()
+    # 首图
+    image = Field()
