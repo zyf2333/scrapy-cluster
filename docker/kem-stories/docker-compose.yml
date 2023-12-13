@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  crawler-kem:
+    image: kem-crawler-dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - ./logs:/usr/gourd/crawler/logs
+    command: [ "scrapy", "runspider", "crawling/spiders/kempower_stories_spiders.py" ]
+    environment:
+      LOG_ENABLED: 1
+      SC_LOG_FILE: crawler_kem.log
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "500m"
+        max-file: "10"
+
