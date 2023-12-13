@@ -4,7 +4,7 @@ services:
   crawler-kem:
     image: kem-crawler-dev
     build:
-      context: .
+      context: ../../
       dockerfile: Dockerfile
     restart: always
     volumes:
