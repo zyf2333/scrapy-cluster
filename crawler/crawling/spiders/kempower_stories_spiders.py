@@ -13,6 +13,9 @@ class KempowerStoriesSpidersSpider(scrapy.Spider):
     allowed_domains = ['kempower.com']
     start_urls = ['http://kempower.com/stories/']
 
+    def __init__(self, *args, **kwargs):
+        super(KempowerStoriesSpidersSpider, self).__init__(*args, **kwargs)
+
     def parse(self, response):
         try:
             # 获取data-posts属性的值
